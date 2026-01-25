@@ -10,6 +10,7 @@ import { getSortedPosts } from "@utils/content";
 import { formatDateToYYYYMMDD } from "@utils/date";
 import { getFileDirFromPath, getPostUrlBySlug, removeFileExtension} from "@utils/url";
 import { i18n } from "@i18n/translation";
+import Giscus from "../../components/misc/Giscus.astro";
 import I18nKey from "@i18n/i18nKey";
 import License from "@components/post/license.astro";
 import Markdown from "@components/common/markdown.astro";
@@ -214,9 +215,19 @@ const jsonLd = {
                             licenseName={entry.data.licenseName}
                             licenseUrl={entry.data.licenseUrl}
                             class="mb-6 rounded-xl license-container onload-animation-up"
+                        
                         />
+                        
                     )
                 }
+
+                <Giscus
+                            repo="username/repo"
+                            repoId=""
+                            category="Announcements"
+                            categoryId=""
+                        />
+                        <br>
             </PasswordProtection>
         </div>
     </div>
