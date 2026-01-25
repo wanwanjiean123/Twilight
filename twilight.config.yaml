@@ -156,7 +156,7 @@ umami:
     # 是否显示Umami统计
     enabled: true
     # UmamiCloudAPI地址
-    baseUrl: "https://api.umami.is"
+    baseUrl: "https://cloud.umami.is/analytics/us/api"
     # API密钥 (可用环境变量覆盖)
     apiKey: "api_FIRFbwkPFrfzQyUIUu9Z0izptwhZvzqR"
     # 要插入的Script (可用环境变量覆盖)
