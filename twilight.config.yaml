@@ -158,7 +158,7 @@ umami:
     # UmamiCloudAPI地址
     baseUrl: "https://cloud.umami.is/analytics/us/api"
     # API密钥 (可用环境变量覆盖)
-    apiKey: "api_FIRFbwkPFrfzQyUIUu9Z0izptwhZvzqR"
+    apiKey: "a5a99602-cf02-40c6-ac6a-bf29f897b738"
     # 要插入的Script (可用环境变量覆盖)
     scripts: "<script defer src='https://cloud.umami.is/script.js' data-website-id='a5a99602-cf02-40c6-ac6a-bf29f897b738'></script>"
 
