@@ -2,7 +2,7 @@
 title: minecraft服务器地址变更后数据的迁移
 published: 2026-01-25
 description: '迁移xaero地图模组的数据'
-image: './cover.jpeg'
+cover: './cover.webp'
 tags: [minecraft]
 category: '游戏'
 draft: false 
