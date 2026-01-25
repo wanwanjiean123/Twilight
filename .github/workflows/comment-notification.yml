@@ -1,0 +1,25 @@
+name: 评论通知系统
+on:
+  discussion_comment:
+    types: [created]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 发送邮件通知
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.qq.com
+          server_port: 465
+          username: ${{ secrets.QQ_EMAIL }}
+          password: ${{ secrets.QQ_AUTH_CODE }}
+          subject: "💬 新评论通知"
+          to: ${{ secrets.NOTIFY_EMAIL }}
+          body: "
+            <h2>💬 新评论通知</h2>
+            p>文章标题：${{ github.event.discussion.title }}</p>
+            <p>评论用户：${{ github.event.comment.user.login }}</p>
+            <p>评论内容：</p>
+            blockquote>${{ github.event.comment.body }}</blockquote>
+            <a href='${{ github.event.comment.html_url }}'>点击查看</a>"
