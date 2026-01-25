@@ -16,6 +16,7 @@ Site Desc: [Your Site Description]
 Site Link: [Your Site Link]
 Avatar Link: [Your Avatar Link]
 
+```
 <script src="https://giscus.app/client.js"
         data-repo="wanwanjiean123/blogcomment"
         data-repo-id="R_kgDORA4QuQ"
@@ -32,4 +33,3 @@ Avatar Link: [Your Avatar Link]
         crossorigin="anonymous"
         async>
 </script>
-```
