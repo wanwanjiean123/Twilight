@@ -246,7 +246,6 @@ export type WidgetComponentType =
     | "tags"
     | "statistics"
     | "toc"
-    | "umami"
     | "custom";
 
 
