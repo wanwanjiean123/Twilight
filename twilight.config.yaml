@@ -53,14 +53,17 @@ site:
         src:
             # 桌面壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             desktop:
-                - "/assets/images/desktopWallpaper_1.jpg"
-                - "/assets/images/desktopWallpaper_2.jpg"
-                - "/assets/images/desktopWallpaper_3.jpg"
+                - "/assets/images/desktopWallpaper_1.webp"
+                - "/assets/images/desktopWallpaper_2.webp"
+                - "/assets/images/desktopWallpaper_3.webp"
+                - "/assets/images/desktopWallpaper_4.webp"
+                - "/assets/images/desktopWallpaper_5.webp"
+                - "/assets/images/desktopWallpaper_6.webp"
             # 移动壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             mobile:
-                - "/assets/images/mobileWallpaper_1.jpg"
-                - "/assets/images/mobileWallpaper_2.jpg"
-                - "/assets/images/mobileWallpaper_3.jpg"
+                - "/assets/images/mobileWallpaper_1.webp"
+                - "/assets/images/mobileWallpaper_2.webp"
+                - "/assets/images/mobileWallpaper_3.webp"
         # 壁纸位置 ('top' | 'center' | 'bottom')
         position: "center"
         # 轮播配置 (fullscreen 和 banner 模式共享)
@@ -157,7 +160,7 @@ umami:
     # API密钥 (可用环境变量覆盖)
     apiKey: "api_FIRFbwkPFrfzQyUIUu9Z0izptwhZvzqR"
     # 要插入的Script (可用环境变量覆盖)
-    scripts: "<script defer src="https://cloud.umami.is/script.js" data-website-id="a5a99602-cf02-40c6-ac6a-bf29f897b738"></script>"
+    scripts: "<script defer src='https://cloud.umami.is/script.js' data-website-id='a5a99602-cf02-40c6-ac6a-bf29f897b738'></script>"
 
 # 导航栏配置
 navbar:
