@@ -144,11 +144,6 @@ site:
             interval: 1.5
     # favicon 配置
     favicon: []
-      - src: /favicon/1.png;
-        theme: light;
-      - src: /favicon/2.png;
-        theme: dark;
-        
     # bangumi 配置
     bangumi:
         # 用户 ID
