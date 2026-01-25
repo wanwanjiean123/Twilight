@@ -1,5 +1,5 @@
 ---
-## 如何申请泥？！
+## 如何申请泥？！（目录可以直达评论区哦！）
 用下方的格式在评论区评论吧~
 ```
 {
@@ -26,6 +26,8 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 ">>📧 发送邮件<</a>  
+
+## 直达评论区
 
 <script src="https://giscus.app/client.js"
         data-repo="wanwanjiean123/blogcomment"
