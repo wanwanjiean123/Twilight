@@ -10,7 +10,7 @@
     "tags": ["friends"]
 }
 ```
----
+
 ### 如果下方没有评论区可以给我投递邮件哦~
 <a href="mailto:wanfory@outlook.com" style="
     display: inline-block;
@@ -25,8 +25,8 @@
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-">>📧 发送邮件<</a>
----
+">>📧 发送邮件<</a>  
+
 <script src="https://giscus.app/client.js"
         data-repo="wanwanjiean123/blogcomment"
         data-repo-id="R_kgDORA4QuQ"
