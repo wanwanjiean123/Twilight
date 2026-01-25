@@ -20,7 +20,7 @@ import rawConfig from "../twilight.config.yaml?raw";
 type ConfigFile = {
     site: SiteConfig;
     umami: {
-        enabled: boolean;
+        enabled: true;
         apiKey?: string;
         baseUrl: string;
         scripts?: string;
