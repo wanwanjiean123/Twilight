@@ -321,7 +321,7 @@ footer:
     # 启用 Footer HTML 注入功能
     enable: true
     # 自定义 HTML 内容，用于添加备案号等信息
-    customHtml: "<p><a href='http://www.beian.miit.gov.cn/' target='_blank'>ICP备案号：渝ICP备2025066457号-2</a></p>"
+    customHtml: "<p><a href='http://beian.miit.gov.cn/' target='_blank'>ICP备案号：渝ICP备2025066457号-2</a></p>"
 
 # 粒子特效配置
 particle:
