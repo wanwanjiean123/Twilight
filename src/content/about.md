@@ -1,5 +1,5 @@
 ---
-import CoupleCard from './components/CoupleCard.astro';
+import CoupleCard from '../components/CoupleCard.astro';
 ---
 
 # 关于我和我的博客
@@ -22,7 +22,7 @@ import CoupleCard from './components/CoupleCard.astro';
 
 #### 情感信息
 
-<CoupleCard client:load />
+<CoupleCard />
 
 ---
 
