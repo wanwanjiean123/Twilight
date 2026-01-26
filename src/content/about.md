@@ -1,7 +1,3 @@
----
-import CoupleCard from '../components/CoupleCard.astro';
----
-
 # 关于我和我的博客
 
 > "记录与分享，让每一次探索都有迹可循。"
@@ -10,7 +6,7 @@ import CoupleCard from '../components/CoupleCard.astro';
 
 ## 我是谁？
 
-#### 个人介绍
+### 个人介绍
 
 我是 **WanForY**，一名享受慢节奏生活的互联网爱好者，目前是一名大学生。在学业之余，我喜欢：
 
@@ -19,10 +15,6 @@ import CoupleCard from '../components/CoupleCard.astro';
 - 保持悠闲自在的生活节奏，享受思考与分享的乐趣
 
 我相信生活与兴趣的结合，能碰撞出更多有意思的火花。
-
-#### 情感信息
-
-<CoupleCard />
 
 ---
 
