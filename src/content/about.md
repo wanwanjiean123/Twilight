@@ -79,6 +79,10 @@
   overflow: hidden;
   border: 3px solid currentColor;
   transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .avatar:hover {
   transform: scale(1.1);
