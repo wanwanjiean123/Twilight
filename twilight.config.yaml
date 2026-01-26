@@ -85,6 +85,7 @@ site:
                 # 副标题，支持单个字符串或字符串数组
                 subtitle:
                     - "~"
+                    - "welcome"
                 # 副标题打字机效果
                 typewriter:
                     # 启用副标题打字机效果
@@ -256,7 +257,7 @@ profile:
     # 信息配置
     name: "WanForY"
     # 简介配置
-    bio: "love what you love"
+    bio: "Love is my oath."
     # 链接配置
     links:
         - # 链接示例
@@ -265,7 +266,7 @@ profile:
             # 图标
             icon: "fa6-brands:qq"
             # 链接
-            url: "https://github.com/Spr-Aachen/Twilight"
+            url: "https://qm.qq.com/q/4OKBvPdWzC"
 
 # 公告配置
 announcement:
@@ -368,7 +369,7 @@ musicPlayer:
     # 启用音乐播放器功能
     enable: true
     # 默认模式 ("meting" API | "local" 本地)
-    mode: "meting"
+    mode: "local"
     # meting 模式专属配置
     meting:
         # Meting API 地址
@@ -385,7 +386,7 @@ musicPlayer:
         playlist:
             - # 列表示例
                 # 序号
-                id: 1
+                id: 2
                 # 标题
                 title: "深海之息"
                 # 作者
@@ -396,8 +397,60 @@ musicPlayer:
                 url: "assets/music/深海之息.m4a"
                 # 时长
                 duration: 146
+            - # 列表示例
+                # 序号
+                id: 1
+                # 标题
+                title: "Stay Here Forever"
+                # 作者
+                artist: "Jewel"
+                # 封面
+                cover: "https://imgessl.kugou.com/stdmusic/480/20250904/20250904025411117893.jpg"
+                # 路径
+                url: "assets/music/Jewel - Stay Here Forever.m4a"
+                # 时长
+                duration: 179
+            - # 列表示例
+                # 序号
+                id: 3
+                # 标题
+                title: "日が落ちるまで"
+                # 作者
+                artist: "ハンバート ハンバート"
+                # 封面
+                cover: "https://imgessl.kugou.com/stdmusic/480/20240111/20240111060201466453.jpg"
+                # 路径
+                url: "assets/music/ハンバート ハンバート - 日が落ちるまで (直到太阳下山).m4a"
+                # 时长
+                duration: 296
+            - # 列表示例
+                # 序号
+                id: 4
+                # 标题
+                title: "Hug me"
+                # 作者
+                artist: "蔡徐坤"
+                # 封面
+                cover: "https://imgessl.kugou.com/stdmusic/480/20220722/20220722114509916947.jpg"
+                # 路径
+                url: "assets/music/蔡徐坤 - Hug me (抱我).m4a"
+                # 时长
+                duration: 150
+            - # 列表示例
+                # 序号
+                id: 5
+                # 标题
+                title: "龙卷风"
+                # 作者
+                artist: "周杰伦"
+                # 封面
+                cover: "https://imgessl.kugou.com/stdmusic/480/20250125/20250125121911543146.jpg"
+                # 路径
+                url: "assets/music/周杰伦 - 龙卷风.m4a"
+                # 时长
+                duration: 250
     # 是否自动播放
-    autoplay: true
+    autoplay: false
 
 # 看板娘配置
 pio:
