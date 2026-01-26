@@ -127,7 +127,6 @@
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.2); }
 }
-/* 响应式设计 */
 @media (max-width: 768px) {
   .couple-card {
     width: 90%;
@@ -173,9 +172,9 @@
 | -------- | ---------------------------- | ------------------- |
 | 托管平台 | Cloudflare / EdgeOne         | 全球加速，安全防护  |
 | 博客框架 | [Astro](https://astro.build) | 现代静态站点生成器  |
-| 主题模板 | Twilight                     | 简约美观的Astro主题 |
+| 主题模板 | [Twilight](https://github.com/Spr-Aachen/Twilight) | 简约美观的Astro主题 |
 | 版本控制 | Git + GitHub                 | 代码托管与协作      |
-| 评论系统 | 待定/可配置                  | 支持多种第三方评论  |
+| 评论系统 | [giscus](https://giscus.app/) | 通过github登陆的评论系统  |
 
 整个博客以**静态站点**形式部署，兼顾了访问速度、安全性与可维护性。
 
