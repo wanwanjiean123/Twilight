@@ -6,7 +6,7 @@ cover: "./cover.jpg"
 pinned: true
 tags: []
 category: Guides
-draft: false
+draft: true
 ---
 
 
