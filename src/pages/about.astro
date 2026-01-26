@@ -14,7 +14,14 @@ import BackwardButton from "@components/backwardButton.astro";
 const pageTitle = LinkPresets[LinkPreset.About].name;
 const pageDescription = LinkPresets[LinkPreset.About].description;
 
-const aboutPost = await getEntry("spec", "about");
+// 尝试获取 about.astro 文件，如果不存在则使用 about.md
+let aboutPost;
+try {
+    aboutPost = await getEntry("spec", "about");
+} catch (error) {
+    // 如果 about.astro 不存在，尝试获取 about.md
+    aboutPost = await getEntry("spec", "about", { extension: ".md" });
+}
 
 if (!aboutPost) {
     throw new Error("About page content not found");
