@@ -349,7 +349,7 @@
   </div>
 </div>
 <script>
-  const startDate = new Date("2022-07-14 00:00:00");// 请修改这里的起始日期为你们的相爱日期
+  const startDate = new Date("2022-07-14 17:05:20");// 请修改这里的起始日期为你们的相爱日期
   function calculateLoveTime() {
     const now = new Date();
     let diff = now - startDate;
