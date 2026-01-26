@@ -27,14 +27,12 @@
       </div>
       <div class="name">WanForY</div>
     </div>
-    
     <div class="connection-line">
       <svg class="lightning" viewBox="0 0 100 50" width="60" height="30">
         <path d="M10,25 L40,15 L35,25 L90,25 L60,35 L65,25 Z" fill="currentColor" opacity="0.8"/>
       </svg>
       <div class="heart">❤️</div>
     </div>
-    
     <div class="avatar-section">
       <div class="avatar right-avatar" oncontextmenu="return false" ondragstart="return false">
         <img src="https://q1.qlogo.cn/g?b=qq&nk=239689209&s=640" alt="右头像" 
@@ -44,7 +42,6 @@
     </div>
   </div>
 </div>
-
 <style>
 .couple-card {
   width: 66.67%;
@@ -59,26 +56,22 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
-
 .couple-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
-
 .avatar-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
-
 .avatar-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
 }
-
 .avatar {
   width: 80px;
   height: 80px;
@@ -87,17 +80,14 @@
   border: 3px solid currentColor;
   transition: transform 0.3s ease;
 }
-
 .avatar:hover {
   transform: scale(1.1);
 }
-
 .avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .connection-line {
   display: flex;
   flex-direction: column;
@@ -105,18 +95,15 @@
   gap: 0.5rem;
   color: currentColor;
 }
-
 .lightning {
   filter: drop-shadow(0 0 2px currentColor);
   animation: sparkle 2s ease-in-out infinite;
 }
-
 .heart {
   font-size: 1.5rem;
   animation: heartbeat 1.5s ease-in-out infinite;
   filter: drop-shadow(0 0 3px currentColor);
 }
-
 .name {
   font-size: 1rem;
   font-weight: 600;
@@ -125,42 +112,34 @@
   opacity: 0.9;
   transition: opacity 0.3s ease;
 }
-
 .avatar-section:hover .name {
   opacity: 1;
 }
-
 @keyframes sparkle {
   0%, 100% { opacity: 0.7; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.1); }
 }
-
 @keyframes heartbeat {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.2); }
 }
-
 /* 响应式设计 */
 @media (max-width: 768px) {
   .couple-card {
     width: 90%;
     padding: 1.5rem;
   }
-  
   .avatar {
     width: 60px;
     height: 60px;
   }
-  
   .connection-line {
     gap: 0.3rem;
   }
-  
   .lightning {
     width: 40px;
     height: 20px;
   }
-  
   .heart {
     font-size: 1.2rem;
   }
