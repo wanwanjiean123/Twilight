@@ -51,6 +51,7 @@ const { class: className, style, slug } = Astro.props;
                 const pageUrl = `/posts/${slug}/`;
                 const encodedPath = encodeURIComponent(`eq.${pageUrl}`);
 
+                // 使用 Umami 共享 API 获取特定页面的统计数据
                 const url = `${UMAMI_CONFIG.baseUrl}/websites/${UMAMI_CONFIG.websiteId}/stats?startAt=${startAt}&endAt=${endAt}&unit=hour&timezone=Asia%2FShanghai&path=${encodedPath}`;
 
                 const response = await fetch(url, {
