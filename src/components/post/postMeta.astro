@@ -114,7 +114,7 @@ const {
                 const pageUrl = `/posts/${slug}/`;
                 // 动态加载 umami-share 插件
                 if (typeof getUmamiPageStats === 'undefined') {
-                    await import("@/plugins/umami-share");
+                    await import("../../plugins/umami-share");
                 }
                 // 调用全局工具获取特定页面的 Umami 统计数据
                 const stats = await getUmamiPageStats(umamiBaseUrl, umamiApiKey, umamiWebsiteId, pageUrl);
