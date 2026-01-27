@@ -69,7 +69,6 @@ site:
                 - "/assets/images/mobileWallpaper_4.webp"
                 - "/assets/images/mobileWallpaper_5.webp"
                 - "/assets/images/mobileWallpaper_6.webp"
-                - "/assets/images/mobileWallpaper_7.webp"
         # 壁纸位置 ('top' | 'center' | 'bottom')
         position: "center"
         # 轮播配置 (fullscreen 和 banner 模式共享)
