@@ -91,10 +91,10 @@ export const siteConfig: SiteConfig = config.site;
 
 // Umami统计配置
 export const umamiConfig = {
-    enabled: true,
-    apiKey: "api_FIRFbwkPFrfzQyUIUu9Z0izptwhZvzqR",
-    baseUrl: "https://api.umami.is",
-    scripts: `<script defer src='https://cloud.umami.is/script.js' data-website-id='a5a99602-cf02-40c6-ac6a-bf29f897b738'></script>`.trim(),
+    enabled: config.umami.enabled,
+    apiKey: import.meta.env.UMAMI_API_KEY ?? config.umami.apiKey,
+    baseUrl: config.umami.baseUrl,
+    scripts: import.meta.env.UMAMI_TRACKING_CODE ?? config.umami.scripts,
 } as const;
 
 // 导航栏配置
