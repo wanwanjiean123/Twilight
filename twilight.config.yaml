@@ -59,11 +59,17 @@ site:
                 - "/assets/images/desktopWallpaper_4.webp"
                 - "/assets/images/desktopWallpaper_5.webp"
                 - "/assets/images/desktopWallpaper_6.webp"
+                - "/assets/images/desktopWallpaper_7.webp"
+                - "/assets/images/desktopWallpaper_8.webp"
             # 移动壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             mobile:
                 - "/assets/images/mobileWallpaper_1.webp"
                 - "/assets/images/mobileWallpaper_2.webp"
                 - "/assets/images/mobileWallpaper_3.webp"
+                - "/assets/images/mobileWallpaper_4.webp"
+                - "/assets/images/mobileWallpaper_5.webp"
+                - "/assets/images/mobileWallpaper_6.webp"
+                - "/assets/images/mobileWallpaper_7.webp"
         # 壁纸位置 ('top' | 'center' | 'bottom')
         position: "center"
         # 轮播配置 (fullscreen 和 banner 模式共享)
