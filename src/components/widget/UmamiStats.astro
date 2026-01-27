@@ -90,9 +90,32 @@ async function fetchUmamiStats() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', fetchUmamiStats);
+// 立即执行一次
+fetchUmamiStats();
 
+// 监听DOM变化，确保组件插入后能获取数据
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+            mutation.addedNodes.forEach((node) => {
+                if (node.nodeType === 1 && node.querySelector && node.querySelector('#total-pageviews')) {
+                    fetchUmamiStats();
+                }
+            });
+        }
+    });
+});
+
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+
+// 页面切换时重新获取数据
 if (window.swup) {
     window.swup.hooks.on('page:view', fetchUmamiStats);
 }
+
+// 确保组件在DOMContentLoaded时也能执行
+document.addEventListener('DOMContentLoaded', fetchUmamiStats);
 </script>
