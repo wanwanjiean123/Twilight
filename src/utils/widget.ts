@@ -16,6 +16,7 @@ export const WIDGET_COMPONENT_MAP = {
     tags: "@components/sidebar/tags.astro",
     toc: "@components/sidebar/toc.astro",
     statistics: "@components/sidebar/statistics.astro",
+    "umami-stats": "@components/widget/UmamiStats.astro",
     custom: null, // 自定义组件需要在配置中指定路径
 } as const;
 

@@ -216,6 +216,11 @@ sidebar:
                 type: "profile"
                 # 位置策略 ("top" 顶部固定 | "sticky" 粘性)
                 position: "top"
+            - # 组件 - Umami统计
+                # 类型
+                type: "umami-stats"
+                # 位置策略 ("top" 顶部固定 | "sticky" 粘性)
+                position: "top"
             - # 组件 - 公告 (预设)
                 # 类型
                 type: "announcement"
