@@ -1,3 +1,4 @@
+
 (function (global) {
     const cacheKey = 'umami-share-cache';
     const cacheTTL = 3600_000; // 1h
