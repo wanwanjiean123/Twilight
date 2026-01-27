@@ -1,4 +1,3 @@
-
 (function (global) {
     const cacheKey = 'umami-share-cache';
     const cacheTTL = 3600_000; // 1h
@@ -25,24 +24,32 @@
         }
 
         const currentTimestamp = Date.now();
-        const statsUrl = `${baseUrl}/v1/websites/${websiteId}/stats?startAt=0&endAt=${currentTimestamp}`;
+        // 使用正确的API端点：/api/websites/{id}/stats
+        const statsUrl = `${baseUrl}/api/websites/${websiteId}/stats?startAt=0&endAt=${currentTimestamp}`;
 
-        const res = await fetch(statsUrl, {
-            headers: {
-                'x-umami-api-key': apiKey
+        try {
+            const res = await fetch(statsUrl, {
+                headers: {
+                    'Authorization': `Bearer ${apiKey}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!res.ok) {
+                const errorText = await res.text();
+                throw new Error(`API请求失败: ${res.status} - ${errorText}`);
             }
-        });
 
-        if (!res.ok) {
-            throw new Error('获取网站统计数据失败');
+            const stats = await res.json();
+
+            // 缓存结果
+            localStorage.setItem(cacheKey, JSON.stringify({ timestamp: Date.now(), value: stats }));
+
+            return stats;
+        } catch (error) {
+            console.error('Umami API请求错误:', error);
+            throw error;
         }
-
-        const stats = await res.json();
-
-        // 缓存结果
-        localStorage.setItem(cacheKey, JSON.stringify({ timestamp: Date.now(), value: stats }));
-
-        return stats;
     }
 
     /**
@@ -56,19 +63,27 @@
      * @returns {Promise<object>} 页面统计数据
      */
     async function fetchPageStats(baseUrl, apiKey, websiteId, urlPath, startAt = 0, endAt = Date.now()) {
-        const statsUrl = `${baseUrl}/v1/websites/${websiteId}/stats?startAt=${startAt}&endAt=${endAt}&url=${encodeURIComponent(urlPath)}`;
+        // 使用正确的API端点：/api/websites/{id}/stats
+        const statsUrl = `${baseUrl}/api/websites/${websiteId}/stats?startAt=${startAt}&endAt=${endAt}&url=${encodeURIComponent(urlPath)}`;
 
-        const res = await fetch(statsUrl, {
-            headers: {
-                'x-umami-api-key': apiKey
+        try {
+            const res = await fetch(statsUrl, {
+                headers: {
+                    'Authorization': `Bearer ${apiKey}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!res.ok) {
+                const errorText = await res.text();
+                throw new Error(`API请求失败: ${res.status} - ${errorText}`);
             }
-        });
 
-        if (!res.ok) {
-            throw new Error('获取页面统计数据失败');
+            return await res.json();
+        } catch (error) {
+            console.error('Umami API请求错误:', error);
+            throw error;
         }
-
-        return await res.json();
     }
 
     /**
