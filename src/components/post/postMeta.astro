@@ -104,6 +104,30 @@ const {
         function generateStatsText(pageViews, visitors) {
             return `浏览量 ${pageViews} · 访客 ${visitors}`;
         }
+        // Umami API调用函数 - 页面统计
+        async function fetchPageStats(baseUrl, apiKey, websiteId, urlPath, startAt = 0, endAt = Date.now()) {
+            const statsUrl = `${baseUrl}/api/websites/${websiteId}/stats?startAt=${startAt}&endAt=${endAt}&url=${encodeURIComponent(urlPath)}`;
+            
+            try {
+                const res = await fetch(statsUrl, {
+                    headers: {
+                        'Authorization': `Bearer ${apiKey}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                if (!res.ok) {
+                    const errorText = await res.text();
+                    throw new Error(`API请求失败: ${res.status} - ${errorText}`);
+                }
+                
+                return await res.json();
+            } catch (error) {
+                console.error('Umami API请求错误:', error);
+                throw error;
+            }
+        }
+        
         // 获取访问量统计
         async function fetchPageViews(isRetry = false) {
             if (!umamiConfig.enabled) {
@@ -112,12 +136,8 @@ const {
             try {
                 // 构造文章页面的URL路径
                 const pageUrl = `/posts/${slug}/`;
-                // 动态加载 umami-share 插件
-                if (typeof getUmamiPageStats === 'undefined') {
-                    await import("../../plugins/umami-share");
-                }
-                // 调用全局工具获取特定页面的 Umami 统计数据
-                const stats = await getUmamiPageStats(umamiBaseUrl, umamiApiKey, umamiWebsiteId, pageUrl);
+                
+                const stats = await fetchPageStats(umamiBaseUrl, umamiApiKey, umamiWebsiteId, pageUrl);
                 // 从返回的数据中提取页面浏览量和访客数
                 const pageViews = stats.pageviews || 0;
                 const visitors = stats.visitors || 0;
